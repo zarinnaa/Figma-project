@@ -1,0 +1,150 @@
+:root {
+    --bg-color: hsl(30, 54%, 90%);
+    --prep-bg-color: hsl(330, 100%, 98%);
+    --prep-color: hsl(332, 51%, 32%);
+    --brandy-red: hsl(14, 45%, 36%);
+    --dark-charcoal: hsl(24, 5%, 18%);
+    --wenge-brown: hsl(30, 10%, 34%);
+}
+
+@font-face {
+    font-family: 'young-serif';
+    src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'outfit';
+    src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+}
+
+h1, h2 {
+    font-family: 'young-serif', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    color: var(--dark-charcoal);
+}
+h2 {
+    color: var(--brandy-red)
+}
+
+body {
+    font-size: 16px;
+    font-family: 'outfit', sans-serif;
+    background-color: var(--bg-color);
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.container {
+    width: 740px;
+    margin: 120px auto;
+    background-color: white;
+    padding: 40px;
+}
+
+.container img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.prep-section {
+    background-color: var(--prep-bg-color);
+    color: var(--prep-color);
+    padding: 28px;
+    border-radius: 12px;
+}
+
+.prep-section h3 {
+    font-size: 20px;
+    font-family: 'outfit';
+    font-weight: 600px;
+    margin: 0;
+}
+
+.prep-section li{
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--wenge-brown);
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--wenge-brown);
+}
+
+ul li::marker{
+    font-size: 0.6em;
+    color: var(--brandy-red);
+    
+}
+
+hr{
+    color: #E3DDD7;
+
+}
+
+ol{
+    color: var(--wenge-brown);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+ol li::marker{color: var(--brandy-red);
+ font-weight: bold;
+}
+
+ol li{
+    line-height: 150%;
+    font-size: 16px;
+}
+
+.nutr-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 24px;
+}
+.nutr-item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #E3DDD7;
+
+}
+.nutr-gr{
+    color: var(--brandy-red);
+    font-weight: bold;
+}
+.nutr-item div{
+    width: 288px;
+}
+
+@media(max-width:500px) {
+    body{
+        margin: 0 auto;
+        padding: 0;
+    }
+    .container{
+        margin: 0 auto;
+        padding: 0;
+        max-width: 375px;
+
+    }
+    img {
+        width: 375px;
+        border-radius: none;
+
+    }
+
+    h1,
+    p,
+    section{
+        padding: 20px 32px;
+    }
+}
